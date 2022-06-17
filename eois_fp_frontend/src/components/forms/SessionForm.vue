@@ -120,8 +120,9 @@ export default {
         async createSession() {
             this.form.dateStart = this.dates[0]
             this.form.dateEnd = this.dates[1]
-            alert(JSON.stringify(this.form))
+            // alert(JSON.stringify(this.form))
             await this.sendSession(this.form)
+            this.$router.push('/admin/sessions')
         }
     }
 }
