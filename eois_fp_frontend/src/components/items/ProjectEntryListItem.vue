@@ -4,7 +4,7 @@
             <v-expansion-panel-header hide-actions expand-icon="mdi-menu-down">
                 <h3>Проект: {{project.name}} </h3><!--{{project.name}}-->
                 <v-spacer/>
-                <p>{{project.status}}</p><!--{{project.status}}-->
+                <p></p><!--{{project.status}}-->
                 <v-checkbox class="shrink mr-2 mt-0" />
             </v-expansion-panel-header>
             <v-expansion-panel-content>
@@ -41,11 +41,11 @@
                             <v-spacer/>
                             <v-btn icon color="blue lighten-2">
                                 <v-icon>mdi-thumb-up</v-icon>
-                                <p>{{project.like}}</p><!--{{project.like}}-->
+                                <p></p><!--{{project.like}}-->
                             </v-btn>
                             <v-btn icon color="lighten-2">
                                 <v-icon>mdi-thumb-down</v-icon>
-                                <p>{{project.dislike}}</p><!--{{project.dislike}}-->
+                                <p></p><!--{{project.dislike}}-->
                             </v-btn>
                         </v-col>
                     </v-row>
