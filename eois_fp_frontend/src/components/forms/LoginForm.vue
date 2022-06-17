@@ -41,7 +41,7 @@ export default {
         async onSubmit() {
             await this.login(this.form)
             if (this.getLoggedIn) {
-                this.$router.push('/admin')
+                this.$router.push('/')
             }
         },
         async onSubmit2() {
