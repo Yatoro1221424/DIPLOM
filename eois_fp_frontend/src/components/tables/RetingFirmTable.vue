@@ -1,7 +1,7 @@
 <template>
    <v-card>
      <v-card-title>
-      Рейтиен участников
+      Рейтиен фирм
       <v-spacer/>
       <v-text-field
         v-model="search"
@@ -41,28 +41,28 @@ export default {
             user: [
                 {
                     
-                    fullname: `Иван Иванов Иванович`,
+                    fullname: `первая`,
                     encouragement: 505,
                     fine: 310,
                     sport: 145,
                     bestcoworcer: 600,
                 },
                 {
-                    fullname: 'Павел Павлов Павлоич',
+                    fullname: 'вирпая',
                     encouragement: 1000,
                     fine: 100,
                     sport: 500,
                     bestcoworcer: 1100,
                 },
                 {
-                    fullname: 'Алла Симонова Романован',
+                    fullname: 'третья',
                     encouragement: 1234,
                     fine: 123,
                     sport: 323,
                     bestcoworcer: 123,
                 },
                 {
-                    fullname: 'Алиса Котова Никитован',
+                    fullname: 'четвертая',
                     encouragement: 1002540,
                     fine: 1034420,
                     sport: 503340,
