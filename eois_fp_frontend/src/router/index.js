@@ -8,12 +8,12 @@ const routes = [
     path: '/',
     name: '',
     component: () => import('../views/Home.vue'),
-    children: [
-      {
-        path: 'list-sessions',
-        component: () => import('../views/public/SessionList.vue')
-      },
-    ]
+    // children: [
+    //   {
+    //     path: 'list-sessions',
+    //     component: () => import('../views/public/SessionList.vue')
+    //   },
+    // ]
   },
   // {
   //   path: '/public',
