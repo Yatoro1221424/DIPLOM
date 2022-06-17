@@ -21,7 +21,39 @@
                 ></v-combobox>
             </v-col>
         </v-row>
-        <SessionList/>
+        <v-expansion-panels focusable>
+            <v-expansion-panel v-for="sessions in getSessions" :key="sessions.id" :project="sessions">
+            <v-expansion-panel-header expand-icon="mdi-menu-down">
+                <h3>Место проведение: {{sessions.place}}</h3>
+                <v-spacer/>
+                <p>Дата начала: {{sessions.dateStart}} </p>
+                <p>Дата конца: {{sessions.dateEnd}}</p>
+            </v-expansion-panel-header>
+            <v-expansion-panel-content>
+                <v-list-item-content>
+                    <v-col>
+                    <v-text-field
+                        label="Краткое описание"
+                        v-model="sessions.description"
+                        prepend-icon="mdi-order-alphabetical-descending"
+                        outlined
+                        readonly
+                        required
+                    ></v-text-field>
+                    <v-spacer/>
+                    <v-textarea
+                        label="Описание"
+                        v-model="sessions.fullDescription"
+                        outlined
+                        readonly
+                        prepend-icon="mdi-order-alphabetical-descending"
+                    ></v-textarea>
+                    <v-btn color="primary" @click="onClick">Подать заявку на сессию</v-btn>
+                    </v-col>
+                </v-list-item-content>
+            </v-expansion-panel-content>
+            </v-expansion-panel>
+        </v-expansion-panels>
         <v-btn depressed class="primary " to="/admin/sessions-create">
             Создать новую сессию
         </v-btn>
@@ -29,9 +61,17 @@
 </template>
 
 <script>
-import SessionList from '../../components/lists/SessionList.vue'
+import { mapActions, mapGetters } from 'vuex'
 export default {
-  components: { SessionList },
     name: 'Sessions',
+    computed: {
+    ...mapGetters('common', ['getSessions'])
+  },
+  methods: {
+    ...mapActions('common', ['fetchSessions'])
+    },
+  async mounted() {
+    await this.fetchSessions() 
+  }
 }
 </script>
