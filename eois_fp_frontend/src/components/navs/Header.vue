@@ -12,11 +12,11 @@
         <v-tabs align-with-title v-if="$route.name == '/'">
           <v-tab>О нас</v-tab>
           <v-tab>Наши направления</v-tab>
-          <v-tab>
-            <router-link to="/curatorial" class="tab-link" >Наши кураторы</router-link>
+          <v-tab to="/curatorial" class="tab-link" >
+            Наши кураторы>
           </v-tab>
-          <v-tab>
-            <router-link to="/admin/project-entries" class="tab-link" >Отзывы</router-link>
+          <v-tab to="/admin/project-entries" class="tab-link" disabled>
+            Отзывы
           </v-tab>
           <v-tab>
             <router-link to="/list-sessions" class="tab-link" >Список сессий</router-link>  
@@ -46,17 +46,17 @@
           <v-tab to="/admin/sessions" class="tab-link" v-if="getLoggedIn">
             Сессии
           </v-tab>
-          <v-tab>
-            <router-link to="/admin/participant-entries" class="tab-link" v-if="getLoggedIn">Заявки участников</router-link>
+          <v-tab  to="/admin/participant-entries" class="tab-link" v-if="getLoggedIn">
+            Заявки участников
           </v-tab>
-          <v-tab>
-            <router-link to="/admin/curator-entries" class="tab-link" v-if="getLoggedIn">Заявки кураторов</router-link>
+          <v-tab to="/admin/curator-entries" class="tab-link" v-if="getLoggedIn">
+            Заявки кураторов
           </v-tab>
           <v-tab to="/admin/project-entries" class="tab-link" v-if="getLoggedIn">
             Проекты
           </v-tab>
-          <v-tab>
-            <router-link to="/admin/user-histore" class="tab-link" v-if="getLoggedIn">Пользователии</router-link>
+          <v-tab to="/admin/user-histore" class="tab-link" v-if="getLoggedIn">
+            Пользователии
           </v-tab>
         </v-tabs>
       </template>
@@ -120,7 +120,7 @@
             </v-list-item>
           </router-link>
 
-          <router-link to="/admin" class="link" v-if="getLoggedIn">
+          <router-link to="/admin/sessions" class="link" v-if="getLoggedIn">
             <v-list-item>
               <v-list-item-icon>
                 <v-icon>mdi-application-cog-outline</v-icon>

@@ -14,8 +14,6 @@
               <v-spacer/>
               <p>Дата начала: {{sessions.dateStart}} </p>
               <p>Дата конца: {{sessions.dateEnd}}</p>
-              <p>Стоиморсть: {{sessions.dateEnd}}</p>
-              <p>Статус {{sessions.status}}</p>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
               <v-list-item-content>
